@@ -66,8 +66,6 @@ export const transaction = async(playerId:number, time:timeType, amount:number, 
 						 newWalletAmount = selectWalletResult.rows[0].balance - (amount);
 					}
 		
-
-					console.log("transaction b");
 					const insertTransactionQuery = 'INSERT INTO transaction(timeCreated, playerId, transactionAmount, newWalletAmount) VALUES ($1, $2, $3, $4) RETURNING id';
 					const TransactionQueryResultId = await client.query(insertTransactionQuery, [time, playerId, amount, newWalletAmount]);		
 	

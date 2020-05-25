@@ -10,7 +10,7 @@ CREATE TABLE Wallet (
 CREATE TABLE transaction (
     id SERIAL PRIMARY KEY,
     playerId INT,
-    timeCreated date, 
+    time date, 
     transactionAmount INT, 
     newWalletAmount INT
 );

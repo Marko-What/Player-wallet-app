@@ -19,7 +19,7 @@ CREATE TABLE transaction (
  CREATE TABLE transactionType  (
       id SERIAL PRIMARY KEY,
       type VARCHAR(24),
-      timeCreated date,
+      time date,
       transactionId INT
 );
 
@@ -39,7 +39,7 @@ CREATE TABLE Wallet (
 CREATE TABLE transaction (
     id SERIAL PRIMARY KEY,
     playerId INT,
-    timeCreated date,
+    time date,
     transactionAmount INT,
     newWalletAmount INT
 );
@@ -48,6 +48,6 @@ CREATE TABLE transaction (
  CREATE TABLE transactionType (
       id SERIAL PRIMARY KEY,
       type VARCHAR(24),
-      timeCreated date,
+      time date,
       transactionId INT
 );

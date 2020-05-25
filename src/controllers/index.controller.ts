@@ -14,7 +14,7 @@ const Joi = require('joi');
 
 
 
-export const walletCreate = (req: Request, res: Response) => {
+export const walletCreate = (req:Request, res:Response) => {
    
 		const type ="start deposit";
 

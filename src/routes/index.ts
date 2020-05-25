@@ -1,7 +1,7 @@
 import {Router} from 'express';
 const router = Router();
 
-import { walletCreate, walletDeposit, walletWithdraw, transactionCheck, transactionTypeCheck } from '../controllers/index.controller';
+import { walletCreate, walletDeposit, walletWithdraw, transactionCheck } from '../controllers/index.controller';
 
 
 
@@ -13,10 +13,6 @@ router.post('/withdraw', walletWithdraw);
 router.get('/history/:playerid?/:page?', transactionCheck);
 
 
-
-
-/* testing route */
-router.get('/transactionTypeCheck', transactionTypeCheck);
 
 
 export default router;

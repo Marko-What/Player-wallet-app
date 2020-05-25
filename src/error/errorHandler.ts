@@ -1,6 +1,6 @@
 
 
-export const transactionErrorHandler = async (result:any, playerId:number, res:Response): Promise<any> => {
+export const transactionErrorHandler = async (result:any, playerId:number, res:any): Promise<any> => {
 	
 		if(result instanceof Object && (result.message == "done")){
 			 return res.status(200).json("message: transaction with playerid: "+result.playerId+" done."+" New player balance: "+result.newAmount);
